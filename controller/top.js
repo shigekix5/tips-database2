@@ -24,8 +24,8 @@ $(function(){
 	var year = date.getFullYear();
 	var month = date.getMonth() + 1;
 	var date = date.getDate();
-	console.log('現在時刻', ConvertDateToString(year, month, date));
 	$('.date input').val(ConvertDateToString(year, month, date));
+	
 
 	$('.btn-primary').click(function() {
 		var description = $('.form-control').val();
@@ -34,7 +34,7 @@ $(function(){
 			category[i] = $(el).attr('category');
 		});
 
-		var date = new Date();
+		var date = new Date($('.date input').val());
 		var year = date.getFullYear();
 		var month = date.getMonth() + 1;
 		var date = date.getDate();

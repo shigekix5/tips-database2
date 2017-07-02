@@ -36,7 +36,7 @@ function UpdateContents(event, data) {
 				UpdateContents(null, data);
 			});
 		 }
- });
+ 	});
 }
 
 // ready
@@ -52,15 +52,15 @@ $(function(){
 		ipcRenderer.send('error', error);
 	};
 
+	ipcRenderer.send('getData');
+	ipcRenderer.on('returnData', function(event, data){
+		UpdateContents(event, data);
+	});
+
 	$('.btn-top').click(function() {
 		$('.nav-group-item').removeClass('active');
 		$(this).addClass('active');
 		ipcRenderer.send('pageChange', 'index');
-	});
-
-	ipcRenderer.send('getData');
-	ipcRenderer.on('returnData', function(event, data){
-		UpdateContents(event, data);
 	});
 
 	$('.btn-tips').click(function() {
