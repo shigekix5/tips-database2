@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="../node_modules/photon/dist/css/photon.css">
+<link rel="stylesheet" href="../style/top.css">
+
+<script src="../controller/top.js"></script>
+
+<title>Tips Database</title>
+</head>
+
+<body>
+    <!-- Wrap your entire app inside .window -->
+    <div class="window">
+        
+      <!-- .toolbar-header sits at the top of your app -->
+       <header class="toolbar toolbar-header">
+         <h1 class="title">Photon</h1>
+       </header>
+
+        <!-- Your app's content goes inside .window-content -->
+        <div class="window-content">
+
+          <div class="pane-group">
+            <div class="pane-sm sidebar">
+              <nav class="nav-group">
+                <h5 class="nav-group-title">Favorites</h5>
+                <a class="nav-group-item active">
+                  <span class="icon icon-home"></span>
+                  Home
+                </a>
+                <span class="nav-group-item btn-tips">
+                  <span class="icon icon-list"></span>
+                  Tips
+                </span>
+              </nav>
+          </div>
+          <div class="pane">
+        </div>
+
+          <div class="content">
+
+          <div class="padded-more">
+            <h1>ToDo Database</h1>
+            <p>
+              Thanks for downloading Photon. This is an example HTML page that's linked up to compiled Photon CSS, has the proper meta tags
+              and the HTML structure.
+            </p>
+          </div>
+
+        <form class="input-view">
+          <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+          <label>Category</label>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" category="JavaScript">JavaScript
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" category="仕事">仕事
+            </label>
+          </div>
+          <label>Date</label>
+          <div class="date">
+            <input type="date" name="date" value="1999-12-24">
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-form btn-default">Cancel</button>
+            <button type="submit" class="btn btn-form btn-primary" id="btn-ok">OK</button>
+          </div>
+      </form>
+
+      </div>
+    </div>
+  </body>
+</html>
