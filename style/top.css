@@ -1,8 +1,14 @@
-
-.content {
-    margin: 50px;
+.form-control.small {
+	width: 200px;
+	margin-left: 20px;
 }
 
-.content .input-view {
-    margin: 20px;
+.input-view .icon-plus-circled {
+	font-size: 25px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.hidden {
+	display: none;
 }

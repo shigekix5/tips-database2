@@ -12,5 +12,8 @@
     "electron-json-storage": "^3.0.1",
     "jquery": "^3.1.1",
     "photon": "git+https://github.com/connors/photon.git"
+  },
+  "devDependencies": {
+    "devtron": "^1.4.0"
   }
 }

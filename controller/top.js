@@ -25,10 +25,12 @@ $(function(){
 	var month = date.getMonth() + 1;
 	var date = date.getDate();
 	$('.date input').val(ConvertDateToString(year, month, date));
-	
+
 
 	$('.btn-primary').click(function() {
-		var description = $('.form-control').val();
+		var $form = $('.form-control')
+		var description = $form.val();
+		$form.val('');
 		var category = [];
 		$('input[type="checkbox"]').filter(':checked').each(function(i, el) {
 			category[i] = $(el).attr('category');
@@ -57,6 +59,11 @@ $(function(){
 		$('.nav-group-item').removeClass('active');
 		$(this).addClass('active');
 		ipcRenderer.send('pageChange', 'result');
+	});
+
+	$('.input-view .icon-plus-circled').click(function() {
+		//TODO 回転させるとオシャレ
+		
 	});
 
 });
